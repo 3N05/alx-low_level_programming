@@ -2,7 +2,6 @@
 /**
  * print_times_table - prints times table for numbers from 0-14
  * @n: An input integer value
- * Return: Nothing
  */
 void print_times_table(int n)
 {
@@ -18,24 +17,21 @@ void print_times_table(int n)
 				if (j == 0)
 				{
 					_putchar(k + '0');
-				}
-				else if (k < 10 && j != 0)
+				} else if (k < 10 && j != 0)
 				{
 					_putchar(',');
 					_putchar(' ');
 					_putchar(' ');
 					_putchar(' ');
 					_putchar(k + '0');
-				}
-				else if (k >= 10 && k < 100)
+				} else if (k >= 10 && k < 100)
 				{
 					_putchar(',');
 					_putchar(' ');
 					_putchar(' ');
 					_putchar((k / 10) + '0');
 					_putchar((k % 10) + '0');
-				}
-				else if (k >= 100)
+				} else if (k >= 100)
 				{
 					_putchar(',');
 					_putchar(' ');
@@ -48,3 +44,4 @@ void print_times_table(int n)
 		}
 	}
 }
+
