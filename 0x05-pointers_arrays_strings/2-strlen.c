@@ -7,10 +7,10 @@
 
 int _strlen(char *s)
 {
-	int estebantupapi;
+	int k;
 
-	for (estebantupapi = 0; s[estebantupapi] != '\0'; estebantupapi++)
+	for (k = 0; s[k] != '\0'; k++)
 		;
 
-	return (estebantupapi);
+	return (k);
 }
