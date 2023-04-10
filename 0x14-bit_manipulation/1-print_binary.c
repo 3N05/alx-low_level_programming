@@ -7,22 +7,21 @@
  */
 void print_binary(unsigned long int n)
 {
-	unsigned int f = 0, m = 32768;
+	int h, count = 0;
+	unsigned long int c;
 
-	if (n == 0)
+	for (h = 63; h >= 0; h--)
 	{
-		_putchar('0');
-		return;
-	}
-	while (m)
-	{
-		if (f == 1 && (n & m) == 0)
-			_putchar('0');
-		else if ((n & m) != 0)
+		c = n >> h;
+
+		if (c & 1)
 		{
-			_putchar('1');
-			f = 1;
+			_putchar ('1');
+			count++;
 		}
-		m >>= 1;
+		else if (count)
+			_putcbar ('0');
 	}
+	if (!count)
+		_putchar('0');
 }
