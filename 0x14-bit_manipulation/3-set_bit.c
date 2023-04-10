@@ -8,11 +8,9 @@
  */
 int set_bit(unsigned long int *n, unsigned int index)
 {
-	unsigned long int m = 0x01;
-
-	m <<= index;
-	if (m == 0)
+	if (index > 63)
 		return (-1);
-	*n |= m;
+
+	*n = ((1UL << index) | *n);
 	return (1);
 }
