@@ -38,7 +38,7 @@ shash_table_t *shash_table_create(unsigned long int size)
 }
 
 /**
- * insert_to_sorted_list - compare abcs and insert node into list (for printing)
+ * insert_to_sorted_list - compare abcs and insert node into list
  * @ht: sorted hash table
  * @node: node to insert
  * Return: 1 if success, 0 if fail
